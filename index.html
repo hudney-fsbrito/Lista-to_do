@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista de tarefas">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="author" content="Hudney Brito">
+    <!-- Css do projeto -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font-awesome do projeto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JavaScript para o projeto -->
+    <script src="js/script.js" defer></script>
+
+    <title>Lista de tarefas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="topo">
+                <input id="input-Tarefa" type="text" placeholder="Nova tarefa">
+                <button id="add-Tarefa">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <ul id="lista-Tarefa">
+            <li>
+                <span id="nome-Tarefa">Tarefa</span>
+                <div class="container-tarefas">
+                    <button id="edita-Tarefa">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                    <button id="exclui-Tarefa">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
