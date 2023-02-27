@@ -29,7 +29,7 @@ body{
     font-size: 1rem;
     color: white;
 }
-#add-Tarefa{
+#btn-add-Tarefa{
     padding: 1rem;
     border-radius: 12px;
     border: none;
@@ -37,7 +37,7 @@ body{
     color: white;
     cursor: pointer;
 }
-#add-Tarefa:active{
+#btn-add-Tarefa:active{
     background-color: white;
     color: black;
 }
@@ -65,9 +65,29 @@ body{
     border-radius: 50%;
     border: none;
     cursor: pointer;
-
+    margin-left: 5px;
 }
 .container-tarefas button:active{
     background-color: white;
     color: black;
 }
+/* 
+#edita-tarefa{
+    background-color: rgba(245, 222, 179, 0.562);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edita-topo{
+    border: 1px solid red;
+    width: 100%;
+    max-width: 450px;
+
+    display: flex;
+    justify-content: space-between;
+} */
