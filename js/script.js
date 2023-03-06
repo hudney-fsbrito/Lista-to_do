@@ -1,28 +1,52 @@
 let addTarefa = document.querySelector("#btn-add-Tarefa");
 let inputNovaTarefa = document.querySelector("#input-Tarefa");
 let listaTarefa = document.querySelector("#lista-Tarefa");
-// let nomeTarefa = document.querySelector("#nome-Tarefa");
+let nomeTarefa = document.querySelector("#nome-Tarefa");
+let editaTarefa = document.getElementById("edita-tarefa");
+let fechaEdicaoTarefa = document.getElementById("btnFechaEdicaoTarefa");
+let idDaTarefaEdicao = document.getElementById("idDaTarefa");
+let inputEditaTarefa = document.getElementById("inputEditaTarefa");
+let btnSalvarEdicao = document.getElementById("btnSalvar");
 
 
 inputNovaTarefa.addEventListener("keypress", (e) => {
 
-    if (e.keyCode == 13) {
-        let tarefa = {
-            nome: inputNovaTarefa.value,
-            id: gerarId(),
+    if (inputNovaTarefa.value != '') {
+        if (e.keyCode == 13) {
+            let tarefa = {
+                nome: inputNovaTarefa.value,
+                id: gerarId(),
+            }
+            criarTarefa(tarefa)
         }
-        console.log(tarefa);
-        criarTarefa(tarefa)
     }
 });
 addTarefa.addEventListener("click", (e) => {
 
-    let tarefa = {
-        nome: inputNovaTarefa.value,
-        id: gerarId(),
+    if (inputNovaTarefa.value != '') {
+        let tarefa = {
+            nome: inputNovaTarefa.value,
+            id: gerarId(),
+        }
+        if (tarefa.nome) {
+            criarTarefa(tarefa)
+        }
     }
-    criarTarefa(tarefa)
 });
+btnSalvarEdicao.addEventListener("click", (e) => {
+
+    let idTarefa = idDaTarefaEdicao.innerHTML.replace('#', '');
+    let tarefa = {
+        nome: inputEditaTarefa.value,
+        id: idTarefa,
+    }
+    let tarefaAtual = document.getElementById(''+idTarefa+'')
+
+    let li = criarTagLI(tarefa)
+    listaTarefa.replaceChild(li, tarefaAtual)
+    fechaJanelaEdicao()
+})
+fechaEdicaoTarefa.addEventListener("click", fechaJanelaEdicao);
 
 function gerarId() {
     return Math.floor(Math.random() * 1000);
@@ -76,5 +100,13 @@ function apagar(idTarefa) {
 
 }
 function editar(idTarefa) {
-    alert(idTarefa)
+    // alert(idTarefa)
+    editaTarefa.style.display = "flex"
+    idDaTarefaEdicao.innerHTML = '#' + idTarefa + '';
+    let li = document.getElementById('' + idTarefa + '')
+    inputEditaTarefa.value = li.innerText
+    
+};
+function fechaJanelaEdicao(){
+    editaTarefa.style.display = "none";
 }

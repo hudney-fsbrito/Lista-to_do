@@ -71,23 +71,99 @@ body{
     background-color: white;
     color: black;
 }
-/* 
+
+/* CONTAINER DE EDIÇÃO DAS TAREFAS */
+
 #edita-tarefa{
     background-color: rgba(245, 222, 179, 0.562);
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .edita-topo{
-    border: 1px solid red;
     width: 100%;
+    height: 50px;
     max-width: 450px;
-
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+    background-color: rgba(23,23,23);
     display: flex;
     justify-content: space-between;
-} */
+    position: relative;
+}
+label{
+    display: inline-block;
+    padding-top: 10px;
+}
+#inputEditaTarefa{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(52, 52, 52, 0.555);
+    caret-color: white;
+    color: white;
+    border: none;
+    border-radius:12px;
+    outline: none;
+    padding: 15px;
+}
+#btnSalvar{
+    background-color: rgba(52, 52, 52, 0.555);
+    color: white;
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: larger;
+    border: none;
+    border-radius:12px;
+    cursor: pointer;
+
+}
+#btnSalvar:hover{
+    background-color:white;
+    color:  rgba(52, 52, 52, 0.555);
+    transition: .4s;
+   
+}
+#btnSalvar:active{
+    background-color: rgba(52, 52, 52, 0.555);
+    color: white;
+   
+}
+
+#btnFechaEdicaoTarefa{
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    background-color: rgba(52, 52, 52);
+    font-size: large;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+#btnFechaEdicaoTarefa:active{
+    background-color: white;
+    color: rgba(52, 52, 52);
+}
+.edita-btn{
+    width: 100%;
+    height: 100px;
+    max-width: 450px;
+    padding: 10px;
+    padding-bottom: 40px;
+    border-radius: 0 0 12px 12px;
+    background-color: rgba(23,23,23);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
